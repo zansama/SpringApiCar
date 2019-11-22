@@ -1,15 +1,29 @@
 package com.apiVoiture.apiVoiture.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
 /**
  *
  */
+@Entity
 public class Voiture {
+
+    @Id
+    @GeneratedValue(strategy= GenerationType.AUTO)
     private int id;
+
+
     private String nom;
     private int prix;
     private String marque;
     private int annee;
 
+
+    public Voiture() {
+    }
     /**
      * @param id
      * @param nom
